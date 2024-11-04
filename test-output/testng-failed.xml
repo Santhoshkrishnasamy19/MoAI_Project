@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="C:/Users/santhosh/AppiumAndroidTesting(failed)">
+    <groups>
+      <run>
+        <exclude name="Smoke"/>
+        <exclude name="Sanity"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.MoAI.DashBoardPage.DashBoardPage">
+        <methods>
+          <include name="ConfigureAppium"/>
+          <include name="StopConfigureAppium"/>
+          <include name="TC_028"/>
+        </methods>
+      </class> <!-- com.MoAI.DashBoardPage.DashBoardPage -->
+    </classes>
+  </test> <!-- C:/Users/santhosh/AppiumAndroidTesting(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

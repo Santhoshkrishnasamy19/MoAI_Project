@@ -21,7 +21,7 @@
             </class>
             
             <!--Welcome page.-->
-            <class name="com.MoAI.Welcomepage.welcomePage">
+            <class name="com.MoAI.Welcomepage.WelcomePage">
                 <methods>
                     <exclude name="TC_001"/>
                 </methods>

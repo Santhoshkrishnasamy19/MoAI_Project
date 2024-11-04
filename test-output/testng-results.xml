@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-04T22:06:29 IST" name="All Test Suite" finished-at="2024-11-04T22:07:24 IST" duration-ms="55205">
+    <groups>
+    </groups>
+    <test started-at="2024-11-04T22:06:29 IST" name="C:/Users/santhosh/AppiumAndroidTesting" finished-at="2024-11-04T22:07:24 IST" duration-ms="55205">
+      <class name="com.MoAI.DashBoardPage.DashBoardPage">
+        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:com.MoAI.DashBoardPage.DashBoardPage@cd3fee8]" started-at="2024-11-04T22:06:29 IST" name="ConfigureAppium" finished-at="2024-11-04T22:06:45 IST" duration-ms="16187" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ConfigureAppium -->
+        <test-method signature="TC_028()[pri:0, instance:com.MoAI.DashBoardPage.DashBoardPage@cd3fee8]" started-at="2024-11-04T22:06:45 IST" name="TC_028" finished-at="2024-11-04T22:07:23 IST" duration-ms="37863" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_028 -->
+        <test-method is-config="true" signature="StopConfigureAppium()[pri:0, instance:com.MoAI.DashBoardPage.DashBoardPage@cd3fee8]" started-at="2024-11-04T22:07:23 IST" name="StopConfigureAppium" finished-at="2024-11-04T22:07:24 IST" duration-ms="1117" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StopConfigureAppium -->
+      </class> <!-- com.MoAI.DashBoardPage.DashBoardPage -->
+    </test> <!-- C:/Users/santhosh/AppiumAndroidTesting -->
+  </suite> <!-- All Test Suite -->
+</testng-results>
