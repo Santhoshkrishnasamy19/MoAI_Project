@@ -70,6 +70,7 @@
                     <exclude name="TC_028"/>
                     <exclude name="TC_029"/>
                     <exclude name="TC_030"/>
+                    <include name="TC_033"/>
                 </methods>
             </class>
 
@@ -93,8 +94,8 @@
             <!--Profile-->
             <class name="com.MoAI.Profile.Profile">
                 <methods>
-                    <include name="TC_031"/>
-                    <include name="TC_032"/>
+                    <exclude name="TC_031"/>
+                    <exclude name="TC_032"/>
                 </methods>
             </class>
 

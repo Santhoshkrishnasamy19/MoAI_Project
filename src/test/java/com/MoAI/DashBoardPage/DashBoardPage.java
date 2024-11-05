@@ -1,16 +1,17 @@
 package com.MoAI.DashBoardPage;
 
 import Base.BaseClass1;
-import com.MoAI.LoginPage.LoginScenarios;
 import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.io.MultiOutputStream;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
 import java.time.Duration;
 
 public class DashBoardPage extends BaseClass1 {
@@ -827,9 +828,21 @@ public class DashBoardPage extends BaseClass1 {
 
     }
 
-    public void TC_031()
-    {
 
+    @Test
+    public void TC_033()
+    {
+//        initializeOutput("OutputFile.txt");
+//        printToBoth("print into both,");
+//        printToBoth("print into both 23 ,");
+//
+//        resetToConsole();
+//        System.out.println("console alone print");
+
+        setupLogger("OutputFile.txt");
+        logger.info("this is form logger for both console and file print.");
+        logger.warning("This warning for both console and file print.");
     }
+
 
 }
