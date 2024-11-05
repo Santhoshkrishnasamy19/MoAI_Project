@@ -1,0 +1,10 @@
+print into both,
+print into both 23 ,
+Nov 05, 2024 9:00:32 PM com.MoAI.DashBoardPage.DashBoardPage TC_033
+INFO: this is form logger for both console and file print.
+Nov 05, 2024 9:00:32 PM com.MoAI.DashBoardPage.DashBoardPage TC_033
+WARNING: This warning for both console and file print.
+Nov 05, 2024 9:02:04 PM com.MoAI.DashBoardPage.DashBoardPage TC_033
+INFO: this is form logger for both console and file print.
+Nov 05, 2024 9:02:04 PM com.MoAI.DashBoardPage.DashBoardPage TC_033
+WARNING: This warning for both console and file print.
