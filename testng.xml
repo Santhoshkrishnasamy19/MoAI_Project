@@ -67,9 +67,9 @@
                     <exclude name="TC_025"/>
                     <exclude name="TC_026"/>
                     <exclude name="TC_027"/>
-                    <include name="TC_028"/>
-                    <include name="TC_029"/>
-                    <include name="TC_030"/>
+                    <exclude name="TC_028"/>
+                    <exclude name="TC_029"/>
+                    <exclude name="TC_030"/>
                 </methods>
             </class>
 
@@ -82,10 +82,19 @@
                 </methods>
             </class>
 
+            <!--Device-->
             <class name="com.MoAI.Devices.Devices">
                 <methods>
                     <exclude name="TC_023"/>
                     <exclude name="TC_024"/>
+                </methods>
+            </class>
+
+            <!--Profile-->
+            <class name="com.MoAI.Profile.Profile">
+                <methods>
+                    <include name="TC_031"/>
+                    <include name="TC_032"/>
                 </methods>
             </class>
 
