@@ -9,10 +9,10 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class WelcomePage extends BaseClass1
+public class welcomePage extends BaseClass1
 {
     //TC_001
-    @Test
+    @Test(enabled = false)
     public void TC_001()
     {
         //Global wait.

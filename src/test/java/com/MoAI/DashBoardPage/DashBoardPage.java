@@ -829,15 +829,15 @@ public class DashBoardPage extends BaseClass1 {
     }
 
 
-    @Test
-    public void TC_033()
+    @Test(enabled = false)
+    public void LoggerDemoCase()
     {
-//        initializeOutput("OutputFile.txt");
-//        printToBoth("print into both,");
-//        printToBoth("print into both 23 ,");
-//
-//        resetToConsole();
-//        System.out.println("console alone print");
+        initializeOutput("OutputFile.txt");
+        printToBoth("print into both,");
+        printToBoth("print into both 23 ,");
+
+        resetToConsole();
+        System.out.println("console alone print");
 
         setupLogger("OutputFile.txt");
         logger.info("this is form logger for both console and file print.");
