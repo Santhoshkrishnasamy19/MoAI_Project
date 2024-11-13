@@ -38,14 +38,14 @@ public class DriverManager {
 
     @BeforeMethod
     public void initializeDriver() throws Exception {
-        String Username = "santhoshk_VZPbNn";
-        String accessKey = "zyXyvqNw85jUwxxAnNKu";
+        String Username = "connectedhealth_0ZAka9";
+        String accessKey = "795Qi1UYRtf2G6eqDYYQ";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("deviceName", "Samsung Galaxy S10");
         capabilities.setCapability("platformVersion", "9.0");
         capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("app", "bs://9dcacc503f8abbfdcba9a0a247d108b6d744a6fd");
+        capabilities.setCapability("app", "bs://fba090cd83fe9ec81b90c22e9de62de067dd5048");
         capabilities.setCapability("automationName", "UiAutomator2");
         capabilities.setCapability("appPackage", "com.moai.android");
 
@@ -88,7 +88,7 @@ public class DriverManager {
         capabilities.setCapability("deviceName", "iPhone 14 Pro Max");
         capabilities.setCapability("platformVersion", "16.0"); // Ensure this matches your app's requirements
         capabilities.setCapability("platformName", "iOS");
-        capabilities.setCapability("app", "bs://2dc8f54d5cdfc638c305084357e85736c2a0b50e");
+        capabilities.setCapability("app", "bs://ce20e4010bb6e3cac2fe0c246923822a04f6455e");
         capabilities.setCapability("automationName", "XCUITest"); // Set your app's bundle ID
 
         String urlString = String.format("https://%s:%s@hub-cloud.browserstack.com/wd/hub", Username, accessKey);

@@ -1,3 +1,4 @@
+/*
 package com.MoAI.More;
 
 import Base.BaseClass1;
@@ -36,29 +37,29 @@ public class More extends BaseClass1
         wait.until(ExpectedConditions.elementToBeClickable(AppiumBy.id("com.moai.android:id/txtNotification"))).click();
         WebElement NotificationHeader = wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.androidUIAutomator
                 ("new UiSelector().text(\"Notifications\")")));
-        logger.info("User currently present in : " + NotificationHeader.getText() + " page.");
+        logger.("User currently present in : " + NotificationHeader.getText() + " page.");
         WebElement Notification = wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.androidUIAutomator
                 ("new UiSelector().resourceId(\"com.moai.android:id/llMain\").instance(0)")));
-        logger.info("Notification is present : " + Notification.getText());
+        logger.("Notification is present : " + Notification.getText());
 
         //User can click the notification to view the details of it.
         Notification.click();
 
         //notification description
         WebElement Description = wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.id("com.moai.android:id/description")));
-        logger.info("Notification description :" + Description.getText());
+        logger.("Notification description :" + Description.getText());
 
         //notification time
         WebElement time = wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.id("com.moai.android:id/txtCurrentTime")));
-        logger.info("Notification time : " +time.getText());
+        logger.("Notification time : " +time.getText());
 
         //Notification personal note
         WebElement PersonalNote = wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.id("com.moai.android:id/txtCurrentTime")));
-        logger.info("Notification personal note : " +PersonalNote.getText());
+        logger.("Notification personal note : " +PersonalNote.getText());
 
         //Notification Days
         WebElement NotificationDays = wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.id("com.moai.android:id/tvWeekDay")));
-        logger.info("Notification personal note : " +NotificationDays.getText());
+        logger.("Notification personal note : " +NotificationDays.getText());
 
         //Done.
         wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.id("com.moai.android:id/tvOkay"))).click();
@@ -68,7 +69,7 @@ public class More extends BaseClass1
 
         //Clearing confirmation message.
         WebElement ConfirmationMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.id("android:id/message")));
-        logger.info("Confirmation message : " + ConfirmationMessage.getText());
+        logger.("Confirmation message : " + ConfirmationMessage.getText());
 
         //ok button for the clearing notification.
         wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.id("android:id/button1"))).click();
@@ -81,21 +82,21 @@ public class More extends BaseClass1
 
         //FAQ's header
         WebElement FAQ_Header = wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.androidUIAutomator("new UiSelector().text(\"FAQs\")")));
-        logger.info("User currently present in : " + FAQ_Header.getText() + " page.");
+        logger.("User currently present in : " + FAQ_Header.getText() + " page.");
 
         //How to use this app
         wait.until(ExpectedConditions.elementToBeClickable(AppiumBy.androidUIAutomator
                 ("new UiSelector().text(\"How to use this app?\")"))).click();
         WebElement HowToUseThisApp = wait.until(ExpectedConditions.visibilityOfElementLocated
                 (AppiumBy.androidUIAutomator("new UiSelector().resourceId(\"com.moai.android:id/txtTitle2\").instance(0)")));
-        logger.info("How to use this app content is present : " + HowToUseThisApp.isDisplayed());
+        logger.("How to use this app content is present : " + HowToUseThisApp.isDisplayed());
 
         //Why do we use it
         wait.until(ExpectedConditions.elementToBeClickable(AppiumBy.androidUIAutomator
                 ("new UiSelector().text(\"Why do we use it?\")"))).click();
         WebElement WhyDoWeUseIt = wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.
                 androidUIAutomator("new UiSelector().resourceId(\"com.moai.android:id/txtTitle2\").instance(1)")));
-        logger.info("Why do we use it content is present : " + WhyDoWeUseIt.isDisplayed());
+        logger.("Why do we use it content is present : " + WhyDoWeUseIt.isDisplayed());
 
         //navigate back
         wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.accessibilityId("Navigate up"))).click();
@@ -105,15 +106,15 @@ public class More extends BaseClass1
 
         //Contact us header
         WebElement ContactUs = wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.androidUIAutomator("new UiSelector().text(\"Contact Us\")")));
-        logger.info("User currently present in : " + ContactUs.getText() + " page.");
+        logger.("User currently present in : " + ContactUs.getText() + " page.");
 
         //To email address.
         WebElement To = wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.id("com.moai.android:id/tvTo")));
-        logger.info("User can see the To email address : " + To.isDisplayed());
+        logger.("User can see the To email address : " + To.isDisplayed());
 
         //To email address.
         WebElement From = wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.id("com.moai.android:id/tvFrom")));
-        logger.info("User can see the To email address : " + From.isDisplayed());
+        logger.("User can see the To email address : " + From.isDisplayed());
 
         //Write your message
         wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.id
@@ -124,7 +125,7 @@ public class More extends BaseClass1
 
         //Error for less character
         WebElement ErrorText = wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.id("com.moai.android:id/text_message_toaster")));
-        logger.info("Error message for less character : " + ErrorText.getText());
+        logger.("Error message for less character : " + ErrorText.getText());
 
         //Write your message
         wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.id
@@ -135,7 +136,7 @@ public class More extends BaseClass1
 
         //Success message
         WebElement SuccessMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.id("com.moai.android:id/text_message_toaster")));
-        logger.info("Success message for the : " + SuccessMessage.getText());
+        logger.("Success message for the : " + SuccessMessage.getText());
 
         //navigate back
         wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.accessibilityId("Navigate up"))).click();
@@ -210,3 +211,4 @@ public class More extends BaseClass1
 
     }
 }
+*/

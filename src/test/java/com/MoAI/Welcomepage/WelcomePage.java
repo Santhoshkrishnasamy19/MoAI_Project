@@ -1,6 +1,5 @@
 package com.MoAI.Welcomepage;
 
-import Base.BaseClass1;
 import Base.DriverManager;
 import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.WebElement;

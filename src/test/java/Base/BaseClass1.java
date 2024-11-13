@@ -1,22 +1,35 @@
 package Base;
+
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.appium.java_client.service.local.AppiumServiceBuilder;
+import org.openqa.selenium.io.MultiOutputStream;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.time.Duration;
+import java.util.logging.Logger;
 
-public class BaseClass1
-{
+public class BaseClass1 {
     public AppiumDriverLocalService Service;
     public static AndroidDriver driver;
 
+    private static PrintStream originalConsole;
+    public static Logger logger = Logger.getLogger("MyLog");
 
-    /*@BeforeMethod
-    public void ConfigureAppium() throws MalformedURLException
-    {
+
+    @BeforeMethod
+    public void ConfigureAppium() throws MalformedURLException {
         System.out.println("Server starts running from Base Class.");
 
         //Run server automatically
@@ -34,20 +47,18 @@ public class BaseClass1
 
         options.setCapability("app", "/home/santhosh/RealProjects/AppiumAndroidTesting (1)/AppiumAndroidTesting/src/test/java/Resourse/app-debug-aug1-changes.apk");
 
-        driver = new AndroidDriver(new URL("http://127.0.0.1:4723"),options);
+        driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
     }
 
-    @AfterMethod
-    }*/
 
-    /*@AfterMethod
-    public void StopConfigureAppium()
-    {
+    @AfterMethod
+    public void StopConfigureAppium() {
         driver.quit();
         Service.stop();
         System.out.println("Server stops running from Base Class");
     }
-*/
+
+
     @Test
     public void BaseLogin() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -73,5 +84,49 @@ public class BaseClass1
         //Verify the OTP
         wait.until(ExpectedConditions.elementToBeClickable(AppiumBy.id("com.moai.android:id/txtVerify"))).click();
     }
+
+    public void initializeOutput(String fileName) {
+        try {
+            // Create a file for output
+            File outputFile = new File(fileName);
+
+            // Create a PrintStream for the file
+            PrintStream filePrintStream = new PrintStream(outputFile);
+
+            // Save original System.out
+            originalConsole = System.out;
+
+            // Create a custom PrintStream that writes to both file and console
+            PrintStream dualPrintStream = new PrintStream(new MultiOutputStream(filePrintStream, originalConsole));
+
+            // Redirect System.out to the dual PrintStream
+            System.setOut(dualPrintStream);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void printToBoth(String message) {
+        System.out.println(message);
+    }
+
+    public static void resetToConsole() {
+        if (originalConsole != null) {
+            System.setOut(originalConsole);
+        }
+    }
+
+    public static void setupLogger(String fileName) {
+       /* try {
+            FileHandler fh = new FileHandler(fileName, true); // true for append mode
+            fh.setFormatter(new SimpleFormatter());
+            logger.addHandler(fh);
+            logger.setUseParentHandlers(true); // Use console handler as well
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
+
+    }
+
 
 }

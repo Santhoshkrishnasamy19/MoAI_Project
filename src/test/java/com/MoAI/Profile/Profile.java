@@ -1,5 +1,6 @@
 package com.MoAI.Profile;
 import Base.BaseClass1;
+import Base.DriverManager;
 import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -8,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class Profile extends BaseClass1 {
+public class Profile extends DriverManager {
 
     @Test
     public void TC_031()
