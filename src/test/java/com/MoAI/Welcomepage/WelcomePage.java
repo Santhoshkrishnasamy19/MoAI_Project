@@ -1,6 +1,7 @@
 package com.MoAI.Welcomepage;
 
 import Base.BaseClass1;
+import Base.DriverManager;
 import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -9,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class WelcomePage extends BaseClass1
+public class WelcomePage extends DriverManager
 {
     //TC_001
     @Test
@@ -39,5 +40,7 @@ public class WelcomePage extends BaseClass1
         boolean loginOrSignup = driver.findElement(AppiumBy.id("com.moai.android:id/txtPhoneLabel")).isDisplayed();
         System.out.println("Navigated to login page : "+ loginOrSignup);
     }
+
+
 
 }

@@ -2,6 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/santhosh/AppiumAndroidTesting">
+        <parameter name="deviceType" value="iOS"/>
 
         <groups>
             <run>
@@ -54,7 +55,7 @@
             <!--DashBoard.-->
             <class name="com.MoAI.DashBoardPage.DashBoardPage">
                 <methods>
-                    <exclude name="TC_010"/>
+                    <include name="TC_010"/>
                     <exclude name="TC_011"/>
                     <exclude name="TC_012"/>
                     <exclude name="TC_013"/>

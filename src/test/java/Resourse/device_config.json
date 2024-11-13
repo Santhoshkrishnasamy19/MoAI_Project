@@ -1,0 +1,18 @@
+{
+  "deviceType": {
+    "iOS": {
+      "deviceName": "iPhone 14 Pro Max",
+      "platformVersion": "16.0",
+      "platformName": "iOS",
+      "app": "bs://2dc8f54d5cdfc638c305084357e85736c2a0b50e",
+      "automationName": "XCUITest"
+    },
+    "Android": {
+      "deviceName": "Google Pixel 3",
+      "platformVersion": "10.0",
+      "platformName": "Android",
+      "app": "bs://9dcacc503f8abbfdcba9a0a247d108b6d744a6fd",
+      "automationName": "UiAutomator2"
+    }
+  }
+}

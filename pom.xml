@@ -36,6 +36,12 @@
             <version>7.8.0</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.browserstack</groupId>
+            <artifactId>browserstack-java-sdk</artifactId>
+            <version>1.26.4</version>
+            <scope>test</scope>
+        </dependency>
 
     </dependencies>
 

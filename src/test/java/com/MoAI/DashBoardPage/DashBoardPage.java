@@ -1,19 +1,18 @@
 package com.MoAI.DashBoardPage;
 
 import Base.BaseClass1;
-import com.MoAI.LoginPage.LoginScenarios;
 import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import Base.DriverManager;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class DashBoardPage extends BaseClass1 {
+public class DashBoardPage extends DriverManager {
+
     @Test(enabled = false)
     public void Login() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -25,8 +24,7 @@ public class DashBoardPage extends BaseClass1 {
         wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.id
                 ("com.moai.android:id/edtMobileNumber"))).sendKeys("0000000000");
 
-        //Clicking the continue button
-        wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.id("com.moai.android:id/txtContinue"))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(AppiumBy.id("com.moai.android:id/txtContinue"))).click();
 
         //Fill the OTP into input field.
         wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.id("com.moai.android:id/editTextOTP1"))).sendKeys("1");
