@@ -4,6 +4,7 @@ import browserstack.shaded.jackson.databind.ObjectMapper;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -18,6 +19,7 @@ import org.testng.annotations.Test;
 import java.io.File;
 import java.net.URL;
 import java.time.Duration;
+import java.util.HashMap;
 import java.util.Map;
 
 
@@ -37,22 +39,35 @@ public class DriverManager {
 
 
     @BeforeMethod
-    public void initializeDriver() throws Exception {
-        String Username = "connectedhealth_0ZAka9";
+    public void initializeDriver() throws Exception
+    {
+       /* String Username = "connectedhealth_0ZAka9";
         String accessKey = "795Qi1UYRtf2G6eqDYYQ";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("deviceName", "Samsung Galaxy S10");
+
+        HashMap<String, Object> browserstackOptions = new HashMap<String, Object>();*/
+
+        /*capabilities.setCapability("deviceName", "Samsung Galaxy S10");
         capabilities.setCapability("platformVersion", "9.0");
         capabilities.setCapability("platformName", "Android");
+
+        browserstackOptions.put("networkProfile", "4g-lte-good"); // Set desired network profile
+        capabilities.setCapability("bstack:options", browserstackOptions);
+
         capabilities.setCapability("app", "bs://fba090cd83fe9ec81b90c22e9de62de067dd5048");
+        capabilities.setCapability("build", "Test_build_for_android");
         capabilities.setCapability("automationName", "UiAutomator2");
         capabilities.setCapability("appPackage", "com.moai.android");
+*/
+        UiAutomator2Options options = new UiAutomator2Options();
 
-        String urlString = String.format("https://%s:%s@hub-cloud.browserstack.com/wd/hub", Username, accessKey);
-        URL url = new URL(urlString);
-        AndroidDriver driver = new AndroidDriver(url, capabilities);
-        setDriver(driver);
+        //String urlString = String.format("https://%s:%s@hub-cloud.browserstack.com/wd/hub", Username, accessKey);
+
+        driver = new AndroidDriver(new URL("https://hub-cloud.browserstack.com/wd/hub"), options);
+        // URL url = new URL(urlString);
+        // AndroidDriver driver = new AndroidDriver(url, capabilities);
+        setDriver(driver = new AndroidDriver(new URL("https://hub-cloud.browserstack.com/wd/hub"), options));
     }
 
     @AfterMethod
@@ -67,7 +82,7 @@ public class DriverManager {
      /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>iOS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
 
-   /* private static final ThreadLocal<AppiumDriver> appiumDriverThreadLocal = new ThreadLocal<>();
+    /*private static final ThreadLocal<AppiumDriver> appiumDriverThreadLocal = new ThreadLocal<>();
     public static IOSDriver driver; // Declare the driver variable for iOS
 
     protected static AppiumDriver getDriver() {
@@ -81,14 +96,16 @@ public class DriverManager {
 
     @BeforeMethod
     public void initializeDriver() throws Exception {
-        String Username = "santhoshk_VZPbNn";
-        String accessKey = "zyXyvqNw85jUwxxAnNKu";
+        String Username = "connectedhealth_0ZAka9";
+        String accessKey = "795Qi1UYRtf2G6eqDYYQ";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
+
         capabilities.setCapability("deviceName", "iPhone 14 Pro Max");
         capabilities.setCapability("platformVersion", "16.0"); // Ensure this matches your app's requirements
         capabilities.setCapability("platformName", "iOS");
         capabilities.setCapability("app", "bs://ce20e4010bb6e3cac2fe0c246923822a04f6455e");
+        capabilities.setCapability("build", "Test_build_for_ios");
         capabilities.setCapability("automationName", "XCUITest"); // Set your app's bundle ID
 
         String urlString = String.format("https://%s:%s@hub-cloud.browserstack.com/wd/hub", Username, accessKey);
